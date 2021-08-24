@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 100vh;
+    background-color: rgba(3, 3, 3, 0.582);
+}
+main {
+    display: flex;
+}
+
+.monster-imgs {
+    position: fixed;
+    width: 1500px;
+    height: 750px;
+    top: 50%;
+    left: 50%;
+    margin-top: -375px;
+    margin-left: -750px;
+    background-image: url("./assets/backgrounds/fight_background.gif");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.monster-imgs > input {
+    align-self: flex-end;
+    width: 400px;
+    height: 300px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+.header {
+    z-index: 2;
+    width: 100vw; 
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.header > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header > div > div {
+    /* min-height: 150px; */
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    justify-content: flex-start;
+}
+.header > div > div >h2 {
+    width: 500px;
+    height: 30px;
+    background-color: rgb(123, 255, 0);
+    white-space: nowrap;
+    overflow: hidden;
+}
+.fight-header > h1 {
+    font-family: fight;
+    font-size: 40px;
+    letter-spacing: 5px;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    animation: body;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+.name-div {
+    background-color: blue;
+    background-image: url("./assets/backgrounds/dungeon_background.gif");
+    background-size: cover;
+    position: fixed;
+    width: 1500px;
+    height: 750px;
+    top: 50%;
+    left: 50%;
+    margin-top: -375px;
+    margin-left: -750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.name-div > h1 {
+    background-color: black;
+    margin-bottom: 100px;
+    align-self: center;
+    font-size: 50px;
+    font-family: dragon;
+    letter-spacing: 5px;
+    animation-name: head;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.name-div > input {
+    align-self: center;
+    width: 300px;
+    height: 75px;
+    font-size: 30px;
+    text-align: center;
+}
+.name-div > button {
+    align-self: center;
+    width: 300px;
+    height: 75px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.reset-button {
+    z-index: 3;
+    position: fixed;
+    top: 30%;
+    left: 47%;
+}
+
+button {
+    border-radius: 5px;
+    font-family: "Righteous";
+    font-size: 25px;
+    position: relative;
+    color: #fffdfc;
+    background-color: #424249;
+    cursor: pointer;
+}
+button:hover {
+    filter: brightness(150%);
+}
+button:active {
+    background: #e5e5e5;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+    outline: none;
+}
+
+@font-face {
+    font-family: dragon;
+    src: url('./assets/fonts/dragonforce/DragonForcE.ttf');
+}
+@font-face {
+    font-family: fight;
+    src: url('./assets/fonts/fighting_spirit_tbs/Fighting\ Spirit\ 2\ bold.otf');
+}
+@keyframes head {
+0% {color: black;}
+25% {color: yellow;}
+50% {color: orange;}
+75% {color: red;}
+100% {color: black;}
+}
+
+@keyframes body {
+0% {color: black;}
+75% {color: red;}
+100% {color: black;}
+}
